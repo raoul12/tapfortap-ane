@@ -1,0 +1,3 @@
+http://www.adobe.com/devnet/air/native-extensions-for-air/extensions/gyroscope.html
+http://stackoverflow.com/questions/7732742/air-3-native-extensions-for-android-can-i-how-to-include-3rd-party-libraries
+http://developer.tapfortap.com/sign-in
