@@ -22,6 +22,8 @@ How to build
 
 ### 2/ Build native/tapfortap-ane-android.jar
 - Import the native/android project into Eclipse.
+- Copy FlashRuntimeExtensions.jar from your AIR SDK into native/android/lib
+- Build the project.
 - Click on File > Export > Java > JAR file and follow the steps.
 
 ### 3/ Build library/bin/tapfortap-ane.swc

@@ -3,5 +3,6 @@
 /example/bin
 /library/bin
 /native/tapfortap-ane-android.jar
-/native\android/bin
-/native\android\lib/FlashRuntimeExtensions.jar
+/native/android/bin
+/native/android/gen
+/native/android/lib/FlashRuntimeExtensions.jar
