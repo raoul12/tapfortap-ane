@@ -13,16 +13,18 @@
   <id>com.adobe.gyroscope</id>
   <versionNumber>1</versionNumber>
   <platforms>
+    <!--
     <platform name="iPhone-ARM">
-            <applicationDeployment>
-                <nativeLibrary>libgyroscopeExtension.a</nativeLibrary>
-                <initializer>ADBEExtInitializer</initializer>
-                <finalizer>ADBEExtFinalizer</finalizer>
-            </applicationDeployment>
-        </platform>
-        <platform name="Android-ARM">
       <applicationDeployment>
-        <nativeLibrary>GyroscopeNative.jar</nativeLibrary>
+        <nativeLibrary>libgyroscopeExtension.a</nativeLibrary>
+        <initializer>ADBEExtInitializer</initializer>
+        <finalizer>ADBEExtFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    -->
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>tapfortap-ane-android.jar</nativeLibrary>
         <initializer>com.adobe.nativeExtension.GyroscopeExtension</initializer>
         <finalizer>com.adobe.nativeExtension.GyroscopeExtension</finalizer>
       </applicationDeployment>
