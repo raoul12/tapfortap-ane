@@ -1,7 +1,7 @@
 tapfortap-ane
 =============
 
-The official Tap for Tap ANE (AIr Native Extension).
+The official Tap for Tap ANE (Air Native Extension).
 
 Prerequisites
 -------------
@@ -39,10 +39,13 @@ How to build
 - Open the project properties panel and go to ActionScript Build Path > Native Extensions > Add ANE then find tapfortap.ane
 - Run the project on your mobile device as usual.
 
+### 6/ Integrate tapfortap-ane to your own project
+- Do not forget to specify the right Android permissions to your app XML.
+
 Useful links
 ------------
 
-- http://developer.tapfortap.com/sign-in
+- http://developer.tapfortap.com/sdk
 - http://developer.android.com/sdk/installing/installing-adt.html
 - http://www.adobe.com/devnet/air/articles/developing-native-extensions-air.html
 - http://help.adobe.com/en_US/air/extensions/WSf268776665d7970d-2482335412ffea65006-8000.html

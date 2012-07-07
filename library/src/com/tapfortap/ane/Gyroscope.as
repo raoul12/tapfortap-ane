@@ -9,7 +9,7 @@
 //	written permission of Adobe.																	  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-package com.adobe.nativeExtensions
+package com.tapfortap.ane
 {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
@@ -58,7 +58,7 @@ package com.adobe.nativeExtensions
         public function Gyroscope(){
 			
 			if (!isInstantiated){
-				extCtx = ExtensionContext.createExtensionContext("com.adobe.gyroscope", null);
+				extCtx = ExtensionContext.createExtensionContext("com.tapfortap.ane", null);
 				
 				if (extCtx != null){
 					extCtx.call("init"); 
@@ -99,7 +99,7 @@ package com.adobe.nativeExtensions
 				// This time is the first time that isSupported() is called. 
 				checkedIfSupported = true;
 				
-				ctx = ExtensionContext.createExtensionContext("com.adobe.gyroscope",null);
+				ctx = ExtensionContext.createExtensionContext("com.tapfortap.ane",null);
 				
 				if (ctx != null) {
 					

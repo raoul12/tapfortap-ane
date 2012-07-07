@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="com.adobe.nativeExtensions.GyroscopeIntervalValue"/>
-    <classEntry path="com.adobe.nativeExtensions.GyroscopeEvent"/>
+    <classEntry path="com.tapfortap.ane.GyroscopeIntervalValue"/>
+    <classEntry path="com.tapfortap.ane.GyroscopeEvent"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

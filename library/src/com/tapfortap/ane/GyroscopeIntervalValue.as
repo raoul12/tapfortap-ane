@@ -9,7 +9,7 @@
 //	written permission of Adobe.																	  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-package com.adobe.nativeExtensions
+package com.tapfortap.ane
 {
 	public class GyroscopeIntervalValue
 	{

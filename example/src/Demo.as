@@ -1,7 +1,7 @@
 package
 {
-	import com.adobe.nativeExtensions.Gyroscope;
-	import com.adobe.nativeExtensions.GyroscopeEvent;
+	import com.tapfortap.ane.Gyroscope;
+	import com.tapfortap.ane.GyroscopeEvent;
 	
 	import flash.display.Sprite;
 	import flash.events.TimerEvent;
@@ -20,7 +20,7 @@ package
 		
 		private var c:int = 1;
 		
-		private var tmr:Timer = new Timer(5000);
+		private var tmr:Timer = new Timer(15000);
 		
 		public function Demo()
 		{

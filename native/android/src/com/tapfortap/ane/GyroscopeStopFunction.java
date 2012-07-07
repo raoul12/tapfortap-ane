@@ -9,7 +9,7 @@
 //	written permission of Adobe.																	  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-package com.adobe.nativeExtension;
+package com.tapfortap.ane;
 
 import android.hardware.Sensor;
 import android.hardware.SensorManager;

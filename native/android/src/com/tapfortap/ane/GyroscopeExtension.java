@@ -9,41 +9,34 @@
 //	written permission of Adobe.																	  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-package com.adobe.nativeExtension;
+package com.tapfortap.ane;
 
-import android.hardware.Sensor;
 import android.util.Log;
 
 import com.adobe.fre.FREContext;
-import com.adobe.fre.FREFunction;
-import com.adobe.fre.FREObject;
-import com.adobe.fre.FREWrongThreadException;
+import com.adobe.fre.FREExtension;
 
-public class GyroscopeSupportedFunction implements FREFunction {
+public class GyroscopeExtension implements FREExtension {
 
 	@Override
-	public FREObject call(FREContext ctx, FREObject[] args) {
-		
-		FREObject retVal = null;
-		
-		Log.i("GyroscopeSupportFunction", "call");
-		GyroscopeExtensionContext gyroExtCtx = (GyroscopeExtensionContext)ctx;
-		Sensor gyroscope = gyroExtCtx.getGyroscope();
-		Boolean haveGyroscope = false;
-		
-		if(gyroscope != null){
-			haveGyroscope = true;
-		}
+	public FREContext createContext(String ctxType) {
 
-		try {
-			retVal = FREObject.newObject(haveGyroscope);
-		}
-		catch (FREWrongThreadException e) { 
-			Log.e("GyroscopeSupportFunction", e.getMessage());
-			return null;
-		}
-		
-		return retVal;
+		Log.i("GyroscopeExtension", "createContext()");
+
+		GyroscopeExtensionContext extCtx = new GyroscopeExtensionContext();
+		return extCtx;
+	}
+
+	@Override
+	public void dispose() {
+
+		Log.i("GyroscopeExtension", "dispose()");
+	}
+
+	@Override
+	public void initialize() {
+		// TODO Auto-generated method stub
+
 	}
 
 }
