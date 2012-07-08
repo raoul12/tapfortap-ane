@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/3.4">
+<application xmlns="http://ns.adobe.com/air/application/3.2">
 	<id>tapfortap.ane.demo</id>
 	<filename>Demo</filename>
 	<name>Demo</name>
 	<versionNumber>1.0.0</versionNumber>
 	<initialWindow>
 		<content>Demo.swf</content>
-        <aspectRatio>landscape</aspectRatio>
-        <!-- The render mode for the app (either auto, cpu, gpu, or direct). Optional. Default auto -->
-        <!-- <renderMode></renderMode> -->
-        <!-- Whether the default direct mode rendering context allocates storage for depth and stencil buffers.  Optional.  Default false. -->
-        <!-- <depthAndStencil></depthAndStencil> -->
-		<autoOrients>false</autoOrients>
+		<autoOrients>true</autoOrients>
         <fullScreen>true</fullScreen>
         <visible>true</visible>
     </initialWindow>

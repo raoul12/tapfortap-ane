@@ -25,8 +25,8 @@
     <platform name="Android-ARM">
       <applicationDeployment>
         <nativeLibrary>tapfortap-ane-android.jar</nativeLibrary>
-        <initializer>com.tapfortap.ane.GyroscopeExtension</initializer>
-        <finalizer>com.tapfortap.ane.GyroscopeExtension</finalizer>
+        <initializer>com.tapfortap.ane.TapForTapExtension</initializer>
+        <finalizer>com.tapfortap.ane.TapForTapExtension</finalizer>
       </applicationDeployment>
     </platform>
   </platforms>
