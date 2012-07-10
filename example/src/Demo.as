@@ -25,7 +25,7 @@ package
 				l.height = 400;
 				l.text = "Hello!";
 				
-				g = new TapForTapAd( "7ad61330-aa87-012f-f0dd-4040d804a637" );
+				g = new TapForTapAd(  );
 				
 				t = new Timer(500);
 				t.addEventListener(TimerEvent.TIMER, onTimer);

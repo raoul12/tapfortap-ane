@@ -18,70 +18,86 @@
 
 package com.tapfortap.ane
 {
-	import flash.events.EventDispatcher;
 	import flash.external.ExtensionContext;
 
-    public class TapForTapAd extends EventDispatcher {  
-	
-		private static var extCtx:ExtensionContext = null;
-        
-        private static var isInstantiated:Boolean = false;
-        
-		private static var checkedIfSupported:Boolean = false;
-        
-		private static var supported:Boolean = false;
-        
-        
+    public class TapForTapAd
+	{  
+		private static var _context : ExtensionContext = null;
 		
-        public function TapForTapAd(){
-			if (!isInstantiated){
-				extCtx = ExtensionContext.createExtensionContext("com.tapfortap.ane", null);
-				
-				isInstantiated = true;
-			}
+        public function TapForTapAd()
+		{
+			if ( !_context )
+				_context = ExtensionContext.createExtensionContext( "com.tapfortap.ane", null );
 		}
 	
-        public static function get isSupported():Boolean {
-			var ctx:ExtensionContext = null;
+        public static function get isSupported() : Boolean
+		{
+			if ( !_context )
+				_context = ExtensionContext.createExtensionContext( "com.tapfortap.ane", null );
+				
+			if ( _context )
+			{
+				return _context.call( "tftCheck" ) as Boolean;
+			}
+			else
+			{
+				return false; 
+			}
+		}
+		
+		public function get errCode() : int
+		{
+			return _context.call( "tftError" ) as int;
+		}
+		
+		public function create(appId : String, props : Object = null) : void
+		{
+			const HAS_ALIGN : int = 0x01;
+			const HAS_COLOR : int = 0x02;
+			const HAS_GENDER : int = 0x10;
+			const HAS_AGE : int = 0x20;
+			const HAS_LOCATION : int = 0x40;
 			
-			if (checkedIfSupported == false) {
-				// This time is the first time that isSupported() is called. 
-				checkedIfSupported = true;
-				
-				ctx = ExtensionContext.createExtensionContext("com.tapfortap.ane",null);
-				
-				if (ctx != null) {
-					
-					ctx.call("init"); 
-					
-					supported = ctx.call("tapfortapSupport") as Boolean;
-					
-					trace("tapfortapSupport Returned : " + supported); 
-								
-					ctx.dispose();
-					ctx = null;
-					return supported;
-				} else {
-					return false; 
-				} 
-			} else {
-				// Already checked if supported, so the value of supported is already set.
-				return supported; 
+			var flags : int = 0;
+			var args : Array = [];
+			
+			var i : int = 0;
+			
+			args[i++] = appId;
+			args[i++] = 0;
+			
+			if ( props.hasOwnProperty("align") )
+			{
+				flags |= HAS_ALIGN;
+				args[i++] = props.align;
 			}
-		}
-		
-		
-		
-		public function getLogBuffer():String {
-			return String(extCtx.call("tapfortapLog"));
-		}
-		
-		
-		
-		public function start():void {
-			if (!extCtx.call("tapfortapStart")) {  
-				throw new Error("Error while creating the Tap for Tap Ad"); 
-			} 
+			
+			if ( props.hasOwnProperty("color") )
+			{
+				flags |= HAS_COLOR;
+				args[i++] = props.color;
+			}
+			
+			if ( props.hasOwnProperty("gender") )
+			{
+				flags |= HAS_GENDER;
+				args[i++] = props.gender;
+			}
+			
+			if ( props.hasOwnProperty("age") )
+			{
+				flags |= HAS_AGE;
+				args[i++] = props.age;
+			}
+			
+			if ( props.hasOwnProperty("location") )
+			{
+				flags |= HAS_LOCATION;
+				args[i++] = props.location;
+			}
+			
+			if ( !_context.call( "tapfortapStart" ) )
+				throw new Error( "Error while creating the Tap for Tap Ad." ); 
 		}
 	}
 }
