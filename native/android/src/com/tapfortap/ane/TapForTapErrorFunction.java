@@ -35,6 +35,8 @@ public class TapForTapErrorFunction implements FREFunction
         try
         {
 			retVal = FREObject.newObject( errorCode );
+			
+			errorCode = 0;
 		}
         catch ( FREWrongThreadException e )
         {

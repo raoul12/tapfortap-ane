@@ -10,50 +10,57 @@ package
 	
 	public class Demo extends Sprite
 	{
-		private var l:TextField = null;
-		private var g:TapForTapAd = null;
-		private var t:Timer = null;
+		private static const APP_ID : String = "7ad61330-aa87-012f-f0dd-4040d804a637";
+		
+		private var log : TextField = null;
+		private var ad : TapForTapAd = null;
 		
 		public function Demo()
 		{
-			if(TapForTapAd.isSupported)
+			log = new TextField();
+			log.x = 20;
+			log.y = 20;
+			log.width = 600;
+			log.height = 400;
+			log.text = "Tap for Tap ANE (Air Native Extension) Demo\n";
+			
+			addChild( log );
+			
+			if ( TapForTapAd.isSupported )
 			{
-				l = new TextField();
-				l.x = 20;
-				l.y = 20;
-				l.width = 600;
-				l.height = 400;
-				l.text = "Hello!";
+				log.appendText( "isSupported: true\n" );
+				log.appendText( "Click to create or destroy an ad.\n" );
 				
-				g = new TapForTapAd(  );
-				
-				t = new Timer(500);
-				t.addEventListener(TimerEvent.TIMER, onTimer);
-				t.start();
-				
-				addChild(l);
-				addEventListener(MouseEvent.CLICK,onClick);
-				
-				trace("success"); 
+				addEventListener( MouseEvent.CLICK, onClick );
 			}
 			else
 			{
-				trace("fail"); 
+				log.appendText( "isSupported: false\n" );
 			}
 		}
 		
-		private function onClick(e:MouseEvent):void{
-			trace("onClick");
-			try {
-				g.start();
-			} catch(e:*) {
-				trace(e);
+		private function onClick( e : MouseEvent ) : void
+		{
+			if ( ad )
+			{
+				ad.dispose();
+				ad = null;
+				
+				log.appendText( "Ad destroyed." );
 			}
-		} 
-		
-		private function onTimer(e:TimerEvent):void{
-			l.text = g.getLogBuffer();
-			trace("onTimer: " + l.text);
+			else
+			{
+				try
+				{
+					ad = new TapForTapAd( APP_ID, {align: "top", color: 0xFF0000, age: 24} );
+					
+					log.appendText( "Ad created." );
+				}
+				catch ( e : Error )
+				{
+					log.appendText( "errCode: " + TapForTapAd.errCode + "\n" );
+				}
+			}
 		} 
 	}
 }

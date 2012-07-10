@@ -24,33 +24,39 @@ package com.tapfortap.ane
 	{  
 		private static var _context : ExtensionContext = null;
 		
-        public function TapForTapAd()
+		private static function get isContextAvailable() : Boolean
 		{
 			if ( !_context )
 				_context = ExtensionContext.createExtensionContext( "com.tapfortap.ane", null );
+			
+			return _context != null;
 		}
-	
-        public static function get isSupported() : Boolean
+		
+		public static function get isSupported() : Boolean
 		{
-			if ( !_context )
-				_context = ExtensionContext.createExtensionContext( "com.tapfortap.ane", null );
-				
-			if ( _context )
-			{
+			if ( isContextAvailable )
 				return _context.call( "tftCheck" ) as Boolean;
-			}
 			else
-			{
 				return false; 
-			}
 		}
 		
-		public function get errCode() : int
+		public static function get errCode() : int
 		{
-			return _context.call( "tftError" ) as int;
+			if ( isContextAvailable )
+				return _context.call( "tftError" ) as int;
+			else
+				return -1;
 		}
 		
-		public function create(appId : String, props : Object = null) : void
+        public function TapForTapAd( appId : String, props : Object = null )
+		{
+			if ( isContextAvailable )
+				init( appId, props );
+			else
+				throw new Error( "Error while creating the Tap for Tap Ad." ); 
+		}
+		
+		private function init( appId : String, props : Object = null ) : void
 		{
 			const HAS_ALIGN : int = 0x01;
 			const HAS_COLOR : int = 0x02;
@@ -96,8 +102,14 @@ package com.tapfortap.ane
 				args[i++] = props.location;
 			}
 			
-			if ( !_context.call( "tapfortapStart" ) )
+			if ( !_context.call( "tftCreate", args ) )
 				throw new Error( "Error while creating the Tap for Tap Ad." ); 
+		}
+		
+		public function dispose() : void
+		{
+			if ( isContextAvailable )
+				_context.call( "tftDestroy" );
 		}
 	}
 }
