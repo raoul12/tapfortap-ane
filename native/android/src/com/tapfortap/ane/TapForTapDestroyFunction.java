@@ -18,47 +18,44 @@
 
 package com.tapfortap.ane;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.widget.FrameLayout;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
-import com.tapfortap.AdView;
+import com.adobe.fre.FREObject;
 
-public class TapForTapExtensionContext extends FREContext
+public class TapForTapDestroyFunction implements FREFunction
 {
-    public AdView adView = null;
-    public FrameLayout adViewLayout = null;
-	
-	@Override
-	public void dispose()
-	{
-        try
-        {
-        	if(adViewLayout != null)
-        	{
-        		adViewLayout.removeAllViews();
-        		adViewLayout = null;
-        	}
-        }
-        catch ( Throwable e )
-        {
-        	// ignore
+    @Override
+	public FREObject call( FREContext ctx, FREObject[] args )
+    {
+		FREObject retVal = null;
+		
+		if ( ((TapForTapExtensionContext)ctx).adView != null )
+		{
+            FrameLayout fl;
+            
+            try
+            {
+            	fl = ((TapForTapExtensionContext)ctx).adViewLayout;
+            	fl.removeAllViews();
+            	
+            	((TapForTapExtensionContext)ctx).adView = null;
+                
+            	retVal = FREObject.newObject( true );
+            }
+            catch ( Throwable e )
+            {
+            	TapForTapErrorFunction.errorCode = 0x12;
+            	
+            	return null;
+    		}
 		}
-	}
-
-	@Override
-	public Map<String, FREFunction> getFunctions()
-	{
-		Map<String, FREFunction> functionMap = new HashMap<String, FREFunction>();
-
-		functionMap.put( "tftError", new TapForTapErrorFunction() );
-		functionMap.put( "tftCreate", new TapForTapCreateFunction() );
-		functionMap.put( "tftDestroy", new TapForTapDestroyFunction() );
-		functionMap.put( "tftCheck", new TapForTapCheckFunction() );
-
-		return functionMap;
+		else
+		{
+			TapForTapErrorFunction.errorCode = 0x11;
+		}
+        
+		return retVal;
 	}
 }

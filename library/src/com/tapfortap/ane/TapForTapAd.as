@@ -69,40 +69,47 @@ package com.tapfortap.ane
 			
 			var i : int = 0;
 			
-			args[i++] = appId;
+			args[i++] = "tftCreate";
 			args[i++] = 0;
+			args[i++] = appId;
 			
 			if ( props.hasOwnProperty("align") )
 			{
 				flags |= HAS_ALIGN;
-				args[i++] = props.align;
+				args[i++] = String(props.align);
 			}
 			
 			if ( props.hasOwnProperty("color") )
 			{
 				flags |= HAS_COLOR;
-				args[i++] = props.color;
+				args[i++] = int(props.color);
 			}
 			
 			if ( props.hasOwnProperty("gender") )
 			{
 				flags |= HAS_GENDER;
-				args[i++] = props.gender;
+				args[i++] = String(props.gender);
 			}
 			
 			if ( props.hasOwnProperty("age") )
 			{
 				flags |= HAS_AGE;
-				args[i++] = props.age;
+				args[i++] = int(props.age);
 			}
 			
 			if ( props.hasOwnProperty("location") )
 			{
 				flags |= HAS_LOCATION;
-				args[i++] = props.location;
+				args[i++] = String(props.location.provider);
+				args[i++] = Number(props.location.latitude);
+				args[i++] = Number(props.location.longitude);
+				args[i++] = Number(props.location.altitude);
+				args[i++] = Number(props.location.time);
 			}
 			
-			if ( !_context.call( "tftCreate", args ) )
+			args[1] = flags;
+			
+			if ( !_context.call.apply( this, args ) )
 				throw new Error( "Error while creating the Tap for Tap Ad." ); 
 		}
 		

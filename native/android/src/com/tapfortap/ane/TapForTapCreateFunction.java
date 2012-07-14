@@ -66,7 +66,7 @@ public class TapForTapCreateFunction implements FREFunction
             	return null;
     		}
             
-            FrameLayout fl;
+            FrameLayout fl = ((TapForTapExtensionContext)ctx).adViewLayout;
             FrameLayout.LayoutParams lp;
             
             try
@@ -83,7 +83,6 @@ public class TapForTapCreateFunction implements FREFunction
 	            		gravity = Gravity.TOP;
             	}
             	
-                fl = new FrameLayout( activity );
                 lp = new FrameLayout.LayoutParams( FrameLayout.LayoutParams.FILL_PARENT, 50, gravity );
     		}
             catch ( Throwable e )
@@ -143,9 +142,17 @@ public class TapForTapCreateFunction implements FREFunction
             
             try
             {
-            	fl.addView( adView );
-            	
-            	activity.addContentView( fl, new LayoutParams( LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT ) );
+            	if(fl == null)
+            	{
+            		fl = new FrameLayout( activity );
+            		fl.addView( adView );
+            		            	
+            		activity.addContentView( fl, new LayoutParams( LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT ) );
+            	}
+            	else
+            	{
+            		fl.addView( adView );
+            	}
     		}
             catch ( Throwable e )
             {
@@ -173,6 +180,9 @@ public class TapForTapCreateFunction implements FREFunction
                 
                 adView.setListener( adViewListener );
                 adView.loadAds();
+                
+                ((TapForTapExtensionContext)ctx).adView = adView;
+                ((TapForTapExtensionContext)ctx).adViewLayout = fl;
                 
                 retVal = FREObject.newObject( true );
     		}
