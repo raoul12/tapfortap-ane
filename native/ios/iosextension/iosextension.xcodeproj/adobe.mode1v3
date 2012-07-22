@@ -313,7 +313,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GyroscopeExtension.m</string>
+								<string>TapForTapExtension.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -321,7 +321,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GyroscopeExtension.m</string>
+										<string>TapForTapExtension.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
@@ -536,7 +536,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>9812F50A136AAB3F00542312</string>
-		<string>/Users/adobe/Desktop/Gyroscope/NativeIOS/iosextension/iosextension.xcodeproj</string>
+		<string>/Users/adobe/Desktop/TapForTap/NativeIOS/iosextension/iosextension.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>13 236 1366 822 0 0 1920 1058 </string>

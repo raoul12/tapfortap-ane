@@ -3,9 +3,9 @@
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeSDKPreference = iphoneos4.2;
-		activeTarget = D2AAC07D0554694100DB518D /* gyroscopeExtension */;
+		activeTarget = D2AAC07D0554694100DB518D /* TapForTapExtension */;
 		addToTargets = (
-			D2AAC07D0554694100DB518D /* gyroscopeExtension */,
+			D2AAC07D0554694100DB518D /* TapForTapExtension */,
 		);
 		codeSenseManager = 98190157136AA88000E165BD /* Code sense */;
 		perUserDictionary = {
@@ -100,7 +100,7 @@
 		fileEncoding = 4;
 		lastKnownFileType = sourcecode.c.h;
 		name = capiextension.h;
-		path = /Users/adobe/Desktop/Gyroscope/NativeIOS/iosextension/capiextension.h;
+		path = /Users/adobe/Desktop/TapForTap/NativeIOS/iosextension/capiextension.h;
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1042, 515}}";
@@ -108,7 +108,7 @@
 			sepNavVisRange = "{0, 144}";
 		};
 	};
-	3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */ = {
+	3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1042, 3744}}";
 			sepNavSelRange = "{1363, 0}";
@@ -216,7 +216,7 @@
 	};
 	98400852140415F500198C5F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
 		name = "capiextension.m: 224";
 		rLen = 0;
 		rLoc = 5429;
@@ -236,7 +236,7 @@
 	};
 	987533BC1418BBBB003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
 		name = "capiextension.m: 224";
 		rLen = 0;
 		rLoc = 5429;
@@ -266,7 +266,7 @@
 	};
 	987533C51418BC6E003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
 		name = "capiextension.m: 224";
 		rLen = 0;
 		rLoc = 5429;
@@ -276,8 +276,8 @@
 	};
 	987533C61418BC6E003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
-		name = "GyroscopeExtension.m: 13";
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
+		name = "TapForTapExtension.m: 13";
 		rLen = 0;
 		rLoc = 264;
 		rType = 0;
@@ -286,8 +286,8 @@
 	};
 	987533CB1418BD24003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
-		name = "GyroscopeExtension.m: 22";
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
+		name = "TapForTapExtension.m: 22";
 		rLen = 0;
 		rLoc = 504;
 		rType = 0;
@@ -296,8 +296,8 @@
 	};
 	987533D11418BDC3003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = AA747D9E0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch */;
-		name = "GyroscopeExtension_Prefix.pch: 6";
+		fRef = AA747D9E0F9514B9006C5449 /* TapForTapExtension_Prefix.pch */;
+		name = "TapForTapExtension_Prefix.pch: 6";
 		rLen = 0;
 		rLoc = 180;
 		rType = 0;
@@ -306,8 +306,8 @@
 	};
 	987533D21418BDC3003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
-		name = "GyroscopeExtension.m: 22";
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
+		name = "TapForTapExtension.m: 22";
 		rLen = 0;
 		rLoc = 504;
 		rType = 0;
@@ -316,8 +316,8 @@
 	};
 	987533D31418BDC3003F183A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
-		name = "GyroscopeExtension.m: 51";
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
+		name = "TapForTapExtension.m: 51";
 		rLen = 0;
 		rLoc = 1363;
 		rType = 0;
@@ -326,7 +326,7 @@
 	};
 	98AE27A513FE564C002D0E01 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
 		name = "capiextension.m: 135";
 		rLen = 0;
 		rLoc = 2883;
@@ -338,7 +338,7 @@
 		isa = PBXFileReference;
 		lastKnownFileType = text.script.sh;
 		name = pkg.sh;
-		path = /Users/adobe/sbhave/Gyroscope/AS/bin/pkg.sh;
+		path = /Users/adobe/sbhave/TapForTap/AS/bin/pkg.sh;
 		sourceTree = "<absolute>";
 	};
 	98D4F4BD13D46389000A3A0C /* PBXTextBookmark */ = {
@@ -395,14 +395,14 @@
 		vrLen = 1076;
 		vrLoc = 472;
 	};
-	AA747D9E0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch */ = {
+	AA747D9E0F9514B9006C5449 /* TapForTapExtension_Prefix.pch */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1042, 515}}";
 			sepNavSelRange = "{180, 0}";
 			sepNavVisRange = "{0, 188}";
 		};
 	};
-	D2AAC07D0554694100DB518D /* gyroscopeExtension */ = {
+	D2AAC07D0554694100DB518D /* TapForTapExtension */ = {
 		activeExec = 0;
 	};
 }

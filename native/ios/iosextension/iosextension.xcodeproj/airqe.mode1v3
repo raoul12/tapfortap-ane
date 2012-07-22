@@ -311,7 +311,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GyroscopeExtension.m</string>
+								<string>TapForTapExtension.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -319,7 +319,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GyroscopeExtension.m</string>
+										<string>TapForTapExtension.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
@@ -527,7 +527,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>0D4C7EC3141E7119002B8DB4</string>
-		<string>/Users/airqe/Users/sbhave/Gyroscope/NativeIOS/iosextension/iosextension.xcodeproj</string>
+		<string>/Users/airqe/Users/sbhave/TapForTap/NativeIOS/iosextension/iosextension.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 146 1440 732 0 0 1440 878 </string>
@@ -767,7 +767,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GyroscopeDebug-Info.plist</string>
+										<string>TapForTapDebug-Info.plist</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>

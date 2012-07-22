@@ -58,7 +58,7 @@ package com.tapfortap.ane
 		
 		private function init( appId : String, props : Object = null ) : void
 		{
-			const HAS_ALIGN : int = 0x01;
+			const HAS_RECT : int = 0x01;
 			const HAS_COLOR : int = 0x02;
 			const HAS_GENDER : int = 0x10;
 			const HAS_AGE : int = 0x20;
@@ -73,10 +73,13 @@ package com.tapfortap.ane
 			args[i++] = 0;
 			args[i++] = appId;
 			
-			if ( props.hasOwnProperty("align") )
+			if ( props.hasOwnProperty("rect") )
 			{
-				flags |= HAS_ALIGN;
-				args[i++] = String(props.align);
+				flags |= HAS_RECT;
+				args[i++] = int(props.rect.x);
+				args[i++] = int(props.rect.y);
+				args[i++] = int(props.rect.width);
+				args[i++] = int(props.rect.height);
 			}
 			
 			if ( props.hasOwnProperty("color") )

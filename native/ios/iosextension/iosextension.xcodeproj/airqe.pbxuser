@@ -3,7 +3,7 @@
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeSDKPreference = iphoneos4.3;
-		activeTarget = D2AAC07D0554694100DB518D /* gyroscopeExtension */;
+		activeTarget = D2AAC07D0554694100DB518D /* TapForTapExtension */;
 		breakpoints = (
 		);
 		codeSenseManager = 0D4C7EB9141E70E1002B8DB4 /* Code sense */;
@@ -155,8 +155,8 @@
 	};
 	0D74BB8B14263C6F000F57B4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
-		name = "GyroscopeExtension.m: 12";
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
+		name = "TapForTapExtension.m: 12";
 		rLen = 0;
 		rLoc = 809;
 		rType = 0;
@@ -165,8 +165,8 @@
 	};
 	0D74BB9714263C8D000F57B4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
-		name = "GyroscopeExtension.m: 14";
+		fRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */;
+		name = "TapForTapExtension.m: 14";
 		rLen = 0;
 		rLoc = 846;
 		rType = 0;
@@ -208,7 +208,7 @@
 		path = /Users/airqe/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/objc/objc.h;
 		sourceTree = "<absolute>";
 	};
-	3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */ = {
+	3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1171, 2808}}";
 			sepNavSelRange = "{846, 0}";
@@ -216,7 +216,7 @@
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
-	D2AAC07D0554694100DB518D /* gyroscopeExtension */ = {
+	D2AAC07D0554694100DB518D /* TapForTapExtension */ = {
 		activeExec = 0;
 	};
 }

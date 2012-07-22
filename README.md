@@ -12,6 +12,7 @@ Prerequisites
 - Android SDK with the API version 8 (for Android 2.2)
 - Eclipse (the one included with Flash Builder is sufficient)
 - Make sure your FLEX_HOME environment variable is set and valid.
+- Xcode 3.1 or later
 
 How to build
 ------------
@@ -23,25 +24,39 @@ How to build
 ### 2/ Build native/tapfortap-ane-android.jar
 - Import the native/android project into Eclipse.
 - Copy FlashRuntimeExtensions.jar from your AIR SDK into native/android/lib
+- Copy the latest version of TapForTap.jar from your TapForTap SDK into native/android/lib
 - Build the project.
 - Click on File > Export > Java > JAR file and follow the steps.
-- Extract the com directory from FlashRuntimeExtensions.jar and add it to tapfortap-ane-android.jar (to manually import *.class files)
+- Extract the com directory from TapForTap.jar and add it to tapfortap-ane-android.jar (to manually import *.class files)
 
-### 3/ Build library/bin/tapfortap-ane.swc
+### 3/ Build native/libTapForTapExtension.a
+- Import the native/ios/iosextension project into Xcode.
+- Copy FlashRuntimeExtensions.h from your AIR SDK into native/ios/iosextension
+- Copy the latest version of libTapForTapAds.a from your TapForTap SDK into native/ios/iosextension/lib
+- Build the project.
+
+### 4/ Build library/bin/tapfortap-ane.swc
 - Import the library project into Flash Builder.
 - Build it.
 
-### 4/ Build tapfortap.ane
+### 5/ Build tapfortap.ane
 - Extract library.swf from tapfortap-ane.swc (in the same directory)
 - Run build_ane.bat (may need some changes if you use your own certificate)
 
-### 5/ Run tapfortap-ane-demo
+How to run
+----------
+
+First, follow the previous steps to build tapfortap.ane or download the latest version from https://github.com/raoul12/tapfortap-ane/downloads
+
+### A/ Run tapfortap-ane-demo
 - Import the example project into Flash Builder.
 - Open the project properties panel and go to ActionScript Build Path > Native Extensions > Add ANE then find tapfortap.ane
 - Run the project on your mobile device as usual.
 
-### 6/ Integrate tapfortap-ane to your own project
+### B/ Integrate tapfortap-ane to your own project
+- Open your project properties panel and go to ActionScript Build Path > Native Extensions > Add ANE then find tapfortap.ane
 - Do not forget to specify the right Android permissions to your app XML.
+- Run your project as usual.
 
 Useful links
 ------------

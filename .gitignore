@@ -5,4 +5,6 @@
 /native/tapfortap-ane-android.jar
 /native/android/bin
 /native/android/gen
-/native/android/lib/FlashRuntimeExtensions.jar
+/example/Fake.mobileprovision
+/example/FakeCert.p12
+/native/libTapForTapExtension.a

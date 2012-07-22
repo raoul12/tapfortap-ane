@@ -22,7 +22,7 @@ import android.app.Activity;
 import android.location.Location;
 import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.FrameLayout;
+import android.widget.AbsoluteLayout;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
@@ -42,7 +42,7 @@ public class TapForTapCreateFunction implements FREFunction
 		{
 			int i = 0;
 			
-			final int HAS_ALIGN = 0x01;
+			final int HAS_RECT = 0x01;
 			final int HAS_COLOR = 0x02;
 			final int HAS_GENDER = 0x10;
 			final int HAS_AGE = 0x20;
@@ -66,24 +66,25 @@ public class TapForTapCreateFunction implements FREFunction
             	return null;
     		}
             
-            FrameLayout fl = ((TapForTapExtensionContext)ctx).adViewLayout;
-            FrameLayout.LayoutParams lp;
+            AbsoluteLayout al = ((TapForTapExtensionContext)ctx).adViewLayout;
+            AbsoluteLayout.LayoutParams lp;
             
             try
             {
-            	int gravity = Gravity.TOP;
+            	int x = 0;
+            	int y = 0;
+            	int w = 300;
+            	int h = 50;
             	
-            	if ( (flags & HAS_ALIGN) != 0 )
+            	if ( (flags & HAS_RECT) != 0 )
             	{
-                	String align = args[i++].getAsString();
-                	
-	            	if ( align.equals( "bottom" ) )
-	            		gravity = Gravity.BOTTOM;
-	            	else if ( align.equals( "top" ) )
-	            		gravity = Gravity.TOP;
+                	x = args[i++].getAsInt();
+                	y = args[i++].getAsInt();
+                	w = args[i++].getAsInt();
+                	h = args[i++].getAsInt();
             	}
             	
-                lp = new FrameLayout.LayoutParams( FrameLayout.LayoutParams.FILL_PARENT, 50, gravity );
+                lp = new AbsoluteLayout.LayoutParams( w, h, x, y );
     		}
             catch ( Throwable e )
             {
@@ -142,16 +143,16 @@ public class TapForTapCreateFunction implements FREFunction
             
             try
             {
-            	if(fl == null)
+            	if(al == null)
             	{
-            		fl = new FrameLayout( activity );
-            		fl.addView( adView );
+            		al = new AbsoluteLayout( activity );
+            		al.addView( adView );
             		            	
-            		activity.addContentView( fl, new LayoutParams( LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT ) );
+            		activity.addContentView( al, new LayoutParams( LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT ) );
             	}
             	else
             	{
-            		fl.addView( adView );
+            		al.addView( adView );
             	}
     		}
             catch ( Throwable e )
@@ -182,7 +183,7 @@ public class TapForTapCreateFunction implements FREFunction
                 adView.loadAds();
                 
                 ((TapForTapExtensionContext)ctx).adView = adView;
-                ((TapForTapExtensionContext)ctx).adViewLayout = fl;
+                ((TapForTapExtensionContext)ctx).adViewLayout = al;
                 
                 retVal = FREObject.newObject( true );
     		}

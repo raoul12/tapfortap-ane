@@ -18,7 +18,7 @@
 
 package com.tapfortap.ane;
 
-import android.widget.FrameLayout;
+import android.widget.AbsoluteLayout;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
@@ -33,12 +33,12 @@ public class TapForTapDestroyFunction implements FREFunction
 		
 		if ( ((TapForTapExtensionContext)ctx).adView != null )
 		{
-            FrameLayout fl;
+            AbsoluteLayout al;
             
             try
             {
-            	fl = ((TapForTapExtensionContext)ctx).adViewLayout;
-            	fl.removeAllViews();
+            	al = ((TapForTapExtensionContext)ctx).adViewLayout;
+            	al.removeAllViews();
             	
             	((TapForTapExtensionContext)ctx).adView = null;
                 

@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3042C8451342EDEC00A6FBD5 /* GyroscopeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */; };
+		3042C8451342EDEC00A6FBD5 /* TapForTapExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */; };
 		9812F51C136AAE2300542312 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9812F51B136AAE2300542312 /* FlashRuntimeExtensions.h */; };
-		9812F7A913717D3F00542312 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9812F7A813717D3F00542312 /* CoreMotion.framework */; };
-		AA747D9F0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch */; };
+		AA747D9F0F9514B9006C5449 /* TapForTapExtension_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TapForTapExtension_Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GyroscopeExtension.m; sourceTree = "<group>"; };
+		3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapForTapExtension.m; sourceTree = "<group>"; };
 		9812F51B136AAE2300542312 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 		9812F7A813717D3F00542312 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		AA747D9E0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GyroscopeExtension_Prefix.pch; sourceTree = "<group>"; };
-		D2AAC07E0554694100DB518D /* libgyroscopeExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgyroscopeExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA747D9E0F9514B9006C5449 /* TapForTapExtension_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapExtension_Prefix.pch; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libTapForTapExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTapForTapExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,7 +25,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9812F7A913717D3F00542312 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,7 +34,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libgyroscopeExtension.a */,
+				D2AAC07E0554694100DB518D /* libTapForTapExtension.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -49,7 +47,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				9812F51B136AAE2300542312 /* FlashRuntimeExtensions.h */,
-				3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */,
+				3042C8431342EDEC00A6FBD5 /* TapForTapExtension.m */,
 			);
 			name = iosextension;
 			sourceTree = "<group>";
@@ -72,7 +70,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AA747D9E0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch */,
+				AA747D9E0F9514B9006C5449 /* TapForTapExtension_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -84,7 +82,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* GyroscopeExtension_Prefix.pch in Headers */,
+				AA747D9F0F9514B9006C5449 /* TapForTapExtension_Prefix.pch in Headers */,
 				9812F51C136AAE2300542312 /* FlashRuntimeExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,9 +90,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC07D0554694100DB518D /* gyroscopeExtension */ = {
+		D2AAC07D0554694100DB518D /* TapForTapExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "gyroscopeExtension" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TapForTapExtension" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -104,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = gyroscopeExtension;
+			name = TapForTapExtension;
 			productName = iosextension;
-			productReference = D2AAC07E0554694100DB518D /* libgyroscopeExtension.a */;
+			productReference = D2AAC07E0554694100DB518D /* libTapForTapExtension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -114,6 +112,9 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "iosextension" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -129,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* gyroscopeExtension */,
+				D2AAC07D0554694100DB518D /* TapForTapExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -139,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3042C8451342EDEC00A6FBD5 /* GyroscopeExtension.m in Sources */,
+				3042C8451342EDEC00A6FBD5 /* TapForTapExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +164,9 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = GyroscopeExtension_Prefix.pch;
+				GCC_PREFIX_HEADER = TapForTapExtension_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = gyroscopeExtension;
+				PRODUCT_NAME = TapForTapExtension;
 				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Debug;
@@ -193,10 +194,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				OTHER_LDFLAGS = "-ObjC";
+				KEEP_PRIVATE_EXTERNS = YES;
+				LIBRARY_SEARCH_PATHS = /Users/User/Desktop/iosextension/lib;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lTapForTapAds",
+				);
 				PREBINDING = NO;
+				PRELINK_LIBS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_LDFLAGS = "-ObjC";
 			};
 			name = Debug;
 		};
@@ -207,16 +215,23 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				KEEP_PRIVATE_EXTERNS = YES;
+				LIBRARY_SEARCH_PATHS = /Users/User/Desktop/iosextension/lib;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lTapForTapAds",
+				);
 				PREBINDING = NO;
+				PRELINK_LIBS = "";
 				SDKROOT = iphoneos;
+				WARNING_LDFLAGS = "-ObjC";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "gyroscopeExtension" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TapForTapExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,

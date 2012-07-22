@@ -13,15 +13,13 @@
   <id>com.tapfortap.ane</id>
   <versionNumber>1</versionNumber>
   <platforms>
-    <!--
     <platform name="iPhone-ARM">
       <applicationDeployment>
-        <nativeLibrary>libgyroscopeExtension.a</nativeLibrary>
-        <initializer>ADBEExtInitializer</initializer>
-        <finalizer>ADBEExtFinalizer</finalizer>
+        <nativeLibrary>libTapForTapExtension.a</nativeLibrary>
+        <initializer>TFTExtInitializer</initializer>
+        <finalizer>TFTExtFinalizer</finalizer>
       </applicationDeployment>
     </platform>
-    -->
     <platform name="Android-ARM">
       <applicationDeployment>
         <nativeLibrary>tapfortap-ane-android.jar</nativeLibrary>

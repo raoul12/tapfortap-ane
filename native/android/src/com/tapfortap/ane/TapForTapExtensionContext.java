@@ -21,7 +21,7 @@ package com.tapfortap.ane;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.widget.FrameLayout;
+import android.widget.AbsoluteLayout;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
@@ -30,14 +30,14 @@ import com.tapfortap.AdView;
 public class TapForTapExtensionContext extends FREContext
 {
     public AdView adView = null;
-    public FrameLayout adViewLayout = null;
+    public AbsoluteLayout adViewLayout = null;
 	
 	@Override
 	public void dispose()
 	{
         try
         {
-        	if(adViewLayout != null)
+        	if ( adViewLayout != null )
         	{
         		adViewLayout.removeAllViews();
         		adViewLayout = null;

@@ -52,7 +52,7 @@ package
 			{
 				try
 				{
-					ad = new TapForTapAd( APP_ID, {align: "top", color: 0xFF00FF00, age: 24} );
+					ad = new TapForTapAd( APP_ID, {rect: {x: 0, y: 0, width: stage.width, height: 50}, color: 0xFF00FF00, age: 24} );
 					
 					log.appendText( "Ad created.\n" );
 				}
