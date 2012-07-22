@@ -125,7 +125,7 @@ public class TapForTapCreateFunction implements FREFunction
             	if ( (flags & HAS_LOCATION) != 0 )
             	{
                 	Location location;
-                	location = new Location( args[i++].getAsString() );
+                	location = new Location( "Tap for Tap ANE" );
                 	location.setLatitude( args[i++].getAsDouble() );
                 	location.setLongitude( args[i++].getAsDouble() );
                 	location.setAltitude( args[i++].getAsDouble() );
